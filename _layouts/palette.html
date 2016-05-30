@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ page.title }} - {{ site.name }}</title>
+	<meta charset="UTF-8">
+	<meta name="theme-color" content="{{ page.tags[0] }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="keywords" content="{{ page.tags[0] }},{{ page.tags[1] }},color,palette,natural,design">
+	<meta name="author" content="GuysWhoCode">
+	<link rel="stylesheet" href="{{ site.baseurl }}/public/css/grid.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/public/css/palette.css">
+	<style>
+		body{	
+			background: {{ page.tags[0] }}; 
+			background: -webkit-linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
+			background: -o-linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
+			background: -moz-linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
+			background: linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+			</div>
+			<div class="palette-container">
+				<div class="col-xs-4 color-palette">
+					<div class="palette">
+						{% for tag in page.tags %}
+							<p class="color" style="background-color: {{ tag }};">{{ tag }}</p>
+						{% endfor %}
+					</div>
+					<p class="name">{{ page.title }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

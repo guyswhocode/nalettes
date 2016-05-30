@@ -1,0 +1,72 @@
+.color-ash{
+	color:#4d4f53;
+}
+.color-green{
+	color: #3bb874;
+}
+body{
+	font-family:"Ubuntu";
+	background-color: #eee;
+	margin:0px;
+	font-family:'Ubuntu';
+}
+
+/* Header */
+header{
+	padding:100px 0px;
+	text-align:center;
+	color:#fff;
+	background-color: #3bb874;
+}
+header h1{
+	margin:10px 0px;
+}
+header p{
+	margin:5px 0px;
+}
+/* Palettes */
+.color-palette-container{
+	margin-top:10px;
+}
+.color-palettes{
+	margin-top:10px;
+}
+.color-palette{
+	background-color:#fff;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10), 0 2px 2px 0 rgba(0, 0, 0, 0.10) !important;
+
+}
+.color{
+	padding:10px;
+	margin:0px;
+	text-align:center;
+	color:transparent;
+}
+.color:hover{
+	color:#fff;
+}
+.name{
+	text-align:center;
+	margin:0px;
+	padding:6px 0px;
+}
+.name a{
+	text-decoration: none;
+	color:#555;
+}
+
+/* Footer */
+footer{
+	padding:10px 0px;
+	background-color: #fff;
+	border-top:1px solid #4d4f53;
+	margin-top:10px;
+}
+footer p{
+	text-align:center;
+	color:#4d4f53;
+}
+footer p a{
+	text-decoration:none;
+	color:#3bb874;
+}
