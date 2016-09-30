@@ -13,23 +13,21 @@
 	<style>
 		body{	
 			background: {{ page.tags[0] }}; 
-			background: -webkit-linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
-			background: -o-linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
-			background: -moz-linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
-			background: linear-gradient({{ page.tags[0] }},{{ page.tags[1] }});
+			background: -webkit-linear-gradient({{ page.tags[0] }}{% for tag in page.tags %},{{ tag }}{% endfor %});
+			background: -o-linear-gradient({{ page.tags[0] }}{% for tag in page.tags %},{{ tag }}{% endfor %});
+			background: -moz-linear-gradient({{ page.tags[0] }}{% for tag in page.tags %},{{ tag }}{% endfor %});
+			background: linear-gradient({{ page.tags[0] }}{% for tag in page.tags %},{{ tag }}{% endfor %});
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-4">
-			</div>
 			<div class="palette-container">
-				<div class="col-xs-4 color-palette">
+				<div class="col-xs-offset-4 col-xs-4 color-palette">
 					<div class="palette">
 						{% for tag in page.tags %}
-							<p class="color" style="background-color: {{ tag }};">{{ tag }}</p>
+						<p class="color" style="background-color: {{ tag }};">{{ tag }}</p>
 						{% endfor %}
 					</div>
 					<p class="name">{{ page.title }}</p>

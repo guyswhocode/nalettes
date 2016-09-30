@@ -12,18 +12,18 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/public/css/style.css">
 </head>
 <body id="home">
-	
 	<header>
 		<div class="intro">
 			<h1>{{ site.name }}</h1>
 			<p>{{ site.description }}</p>
 		</div>
 	</header>
+
 	<!-- palettes -->
 	<div class="container">
 		<div class="row color-palettes">
 			{% for post in site.posts %}
-			<div class="col-xs-4 col-sm-3 col-md-2 color-palette-container">
+			<div class="col-xs-6 col-sm-3 col-md-2 color-palette-container">
 				<div class="color-palette">
 					<div class="palette">
 						{% for tag in post.tags %}
