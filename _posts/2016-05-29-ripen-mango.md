@@ -1,5 +1,5 @@
 ---
 layout: palette
-title: Ripen Mango
-tags: ["#FDC636","#E49B00"]
+title: Mango
+tags: ["#efc84e","#e6a60a"]
 ---

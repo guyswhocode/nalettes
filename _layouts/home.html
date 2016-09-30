@@ -24,7 +24,7 @@
 	<!-- palettes -->
 	<div class="container">
 		<div class="row color-palettes">
-			{% for post in site.posts %}
+			{% for post in site.posts limit:100 %}
 			<div class="col-xs-6 col-sm-3 col-md-2 color-palette-container">
 				<div class="color-palette">
 					<div class="palette">
