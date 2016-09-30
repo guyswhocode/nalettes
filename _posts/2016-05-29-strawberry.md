@@ -1,5 +1,5 @@
 ---
 layout: palette
 title: Strawberry
-tags: ["#FB2222","#FF0000"]
+tags: ["#ed5564","#d9434e"]
 ---
