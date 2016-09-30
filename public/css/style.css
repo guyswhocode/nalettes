@@ -32,9 +32,12 @@ header p{
 	margin-top:10px;
 }
 .color-palette{
+	border-radius: 4px;
 	background-color:#fff;
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10), 0 2px 2px 0 rgba(0, 0, 0, 0.10) !important;
-
+}
+.palette .color:nth-child(1){
+	border-radius: 4px 4px 0px 0px;
 }
 .color{
 	padding:10px;
