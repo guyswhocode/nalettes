@@ -34,8 +34,8 @@
 						{% endfor %}
 					</div>
 					<p class="name">{{page.title}}
-						<a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}"></a>
-						<a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}"></a>
+						<a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}"></a>
+						<a href="{{ site.baseurl }}{{ page.next.url }}" class="next" title="{{ page.next.title }}"></a>
 					</p>
 				</div>
 			</div>
