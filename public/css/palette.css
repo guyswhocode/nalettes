@@ -1,4 +1,4 @@
-html {
+html{
 	height: 100%;
 }
 body {
@@ -33,15 +33,65 @@ body {
 	color:transparent;
 	text-transform: uppercase;
 }
+.palette .show{
+	color: white;
+}
 .palette .color:hover{
 	color:#fff;
 }
 .color-palette .name{
-	color:#555;
+	color:#444;
 	padding:10px 0px;
 	margin:0px;
 	text-align:center;
 }
-/* .container{
-	margin:20% auto;
-} */
+
+/* Controls */
+.name{
+	position: relative;
+	height: 40px;
+	width: 100%;
+}
+.name a{
+	width: 20px;
+	height: 20px;
+	background-position: center center;
+	background-size: cover;
+}
+.name a.prev{
+	background-image: url('../icons/left-arrow.svg');
+	position: absolute;
+	left: 6px;
+	top: 10px;
+}
+.name a.next{
+	background-image: url('../icons/right-arrow.svg');
+	position: absolute;
+	right: 6px;
+	top: 10px;
+}
+
+a.home,
+a.contri{
+	position: absolute;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+	background-position: center center;
+	background-size: cover;
+	opacity: 0.6;
+}
+a.home:hover,
+a.home:focus,
+a.contri:hover,
+a.contrib:focus{
+	opacity: 1.0;
+}
+a.home{
+	left: 10px;
+	background-image: url('../icons/home.svg');
+}
+a.contri{
+	right: 10px;	
+	background-image: url('../icons/github.svg');
+}
