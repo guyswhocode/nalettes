@@ -22,10 +22,10 @@
 </head>
 <body>
 	<div class="container">
-	
+		
 		<a href="{{ site.baseurl }}/" class="home" title="Home"></a>
 		<a href="http://github.com/guyswhocode/nalettes" class="contri" title="Contibute to Nalettes"></a>
-			<div class="row">
+		<div class="row">
 			<div class="palette-container">
 				<div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4 color-palette">
 					<div class="palette">
@@ -34,8 +34,12 @@
 						{% endfor %}
 					</div>
 					<p class="name">{{page.title}}
+						{% if page.previous %}
 						<a href="{{ site.baseurl }}{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}"></a>
+						{% endif %}
+						{% if page.next %}
 						<a href="{{ site.baseurl }}{{ page.next.url }}" class="next" title="{{ page.next.title }}"></a>
+						{% endif %}
 					</p>
 				</div>
 			</div>
