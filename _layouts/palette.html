@@ -8,6 +8,32 @@
 	<meta name="description" content="{{ site.description }}">
 	<meta name="keywords" content="{{ page.tags[0] }},{{ page.tags[1] }},color,palette,natural,design">
 	<meta name="author" content="GuysWhoCode">
+
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="{{ site.name }}" />
+	<meta property="og:url" content="{{ site.baseurl }}" />
+	<meta property="og:description" content="{{ site.description }}" />
+	<meta property="og:image" content="{{ site.baseurl }}/public/logo/nalette-logo.jpg" />
+	<meta property="og:site_name" content="{{ site.name }}" />
+	<meta property="og:locale" content="en_US" />
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="{{ site.baseurl }}" />
+	<meta name="twitter:description" content="{{ site.description }}" />
+	<meta name="twitter:title" content="{{ site.name }}" />
+	<meta name="twitter:image" content="{{ site.baseurl }}/public/logo/nalette-logo.jpg" />
+
+	<!-- Favicons  -->
+	<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png">
+	<link rel="apple-touch-icon" sizes="200x200" href="{{ site.baseurl }}/public/logo/nalette-logo.jpg">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ site.baseurl }}/public/logo/nalette-logo.jpg" sizes="200x200">
+	<meta name="msapplication-TileColor" content="#33bb77">
+	<meta name="msapplication-TileImage" content="{{ site.baseurl }}/public/logo/nalette-logo.jpg">
+
+
 	<link rel="stylesheet" href="{{ site.baseurl }}/public/css/grid.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/public/css/palette.css">
 	<style>
