@@ -1,18 +1,11 @@
 #
 # This file contains configuration flags to customize your site
 #
-
 # Name of your site (displayed in the header)
-name: Nalettes - Nature Inspired Color Palettes
+name: Nalettes
 
 # Short bio or description (displayed in the header)A repository of color palettes picked up carefully, inspired from nature.
 description: A repository of color palettes picked up carefully, inspired from nature.
-
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: /public/img/sanz-logo.png
-
-# About the author or the blog
-about : We are a nonprofit organization working to bridge the gap between students and computer technologies. We also aims at developing on ideas that are useful and beneficial to everyone. 
 
 
 # Catogories
