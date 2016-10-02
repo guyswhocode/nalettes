@@ -80,7 +80,9 @@ header a.add{
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-header a.add:hover{	
+header a.add:hover,
+header a.add:active,
+header a.add:focus{	
 	transform: rotate(90deg);
 }
 
