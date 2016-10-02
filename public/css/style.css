@@ -58,14 +58,41 @@ header p{
 	color:#555;
 }
 
+header{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+header a.add{
+	position: absolute;
+	bottom: -25px;
+	right: 50px;
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: #39d;
+	background-image: url('../icons/add.svg');
+	background-position: center center;
+	background-size: 25px;
+	background-repeat: no-repeat;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+header a.add:hover{	
+	transform: rotate(90deg);
+}
+
 /* Footer */
 footer{
-	padding:10px 0px;
+	padding:4px 0px;
 	background-color: #fff;
 	border-top:1px solid #ccc;
 	margin-top:10px;
 }
 footer p{
+	margin: 10px auto; 
 	text-align:center;
 	color:#4d4f53;
 }
