@@ -5,10 +5,9 @@
 	color: #3bb874;
 }
 body{
-	font-family:"Ubuntu";
+	font-family: 'Ubuntu', sans-serif;
 	background-color: #eee;
 	margin:0px;
-	font-family:'Ubuntu';
 }
 
 /* Header */
