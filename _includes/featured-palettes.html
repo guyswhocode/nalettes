@@ -1,0 +1,13 @@
+<section id="featured-articles" class="container box">
+	<div class="row">
+		{% for post in site.categories.featured %}
+		<article class="col-sm-4">
+			<img src="{{ site.baseurl }}/public/img/posts/{{ post.thumbnail }}" alt="Dummy Image" class="img img-responsive">
+			<h2><a href="{{ site.baseurl }}{{ post.url }}">
+				{{ post.title }}
+			</a>
+			</h2>			
+		</article>
+		{% endfor %}
+	</div>
+</section>

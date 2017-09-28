@@ -1,0 +1,114 @@
+.color-ash{
+	color:#4d4f53;
+}
+.color-green{
+	color: #3bb874;
+}
+body{
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #eee;
+	margin:0px;
+}
+
+/* Header */
+header{
+	padding:100px 0px;
+	text-align:center;
+	color:#fff;
+	background-color: #3bb874;
+}
+header h1{
+	margin:10px 0px;
+}
+header p{
+	margin:5px 0px;
+}
+/* Palettes */
+.color-palette-container{
+	margin-top:10px;
+}
+.color-palettes{
+	margin-top:10px;
+}
+.color-palette{
+	border-radius: 4px;
+	background-color:#fff;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10), 0 2px 2px 0 rgba(0, 0, 0, 0.10) !important;
+}
+.palette .color:nth-child(1){
+	border-radius: 4px 4px 0px 0px;
+}
+.palette .color:hover{
+}
+.color{
+	padding:10px;
+	margin:0px;
+	text-align:center;
+	color:transparent;
+	text-transform: uppercase;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.color:hover{
+	color:#fff;
+	box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.10) !important;
+}
+.color-palette:hover{
+	box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.10) !important;
+}
+.name{
+	text-align:center;
+	margin:0px;
+	padding:6px 0px;
+}
+.name a{
+	text-decoration: none;
+	color:#555;
+}
+
+header{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+header a.add{
+	position: absolute;
+	bottom: -25px;
+	right: 50px;
+	height: 50px;
+	width: 50px;
+	border-radius: 25px;
+	background-color: #39d;
+	background-image: url('../icons/add.svg');
+	background-position: center center;
+	background-size: 25px;
+	background-repeat: no-repeat;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+header a.add:hover,
+header a.add:active,
+header a.add:focus{	
+	transform: rotate(90deg);
+}
+
+/* Footer */
+footer{
+	padding:4px 0px;
+	background-color: #fff;
+	border-top:1px solid #ccc;
+	margin-top:10px;
+}
+footer p{
+	margin: 10px auto; 
+	text-align:center;
+	color:#4d4f53;
+}
+footer p a{
+	text-decoration:none;
+	color:#3bb874;
+}
