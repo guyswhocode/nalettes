@@ -4,7 +4,7 @@ html,body{
 #color-box{
   height:100%;
   background-color: #7f53ac;
-  background-image: linear-gradient(0deg, #7f53ac, #647dee);
+  background-image: linear-gradient(180deg, #7f53ac, #647dee);
 }
 #color-box .row{
   height:33.33%;
@@ -29,7 +29,7 @@ html,body{
   font-family: Ubuntu;
 }
 .controls #title {
-  font-size: 2em;
+  font-size: 1em;
 }
 
 .controls a span{

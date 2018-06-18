@@ -12,9 +12,9 @@
   <div class="color-box" id="color-box">
     <div class="row color-1"></div>
     <div class="row controls">
-      <a id="prev"><span>Pineapple Yellow</span></a>
+      <a id="prev"><span>&lt;</span></a>
       <a id="title"><span>Diamond Blue</span></a>
-      <a id="next"><span>Berry Red</span></a>
+      <a id="next"><span>&gt;</span></a>
     </div>
     <div class="row color-2"></div>
   </div>
@@ -33,19 +33,9 @@
       for (var c = 1; c < colorDetails.colors.length; c++) {
         colorsCombo+= `,${colorDetails.colors[c]}`;
       }
-      colorBox.style.backgroundImage = `linear-gradient(0deg, ${colorsCombo})`;
+      colorBox.style.backgroundImage = `linear-gradient(180deg, ${colorsCombo})`;
       colorTitle.innerHTML = `<span>${colorDetails.title}</span>`
       chromeBar.content = colorDetails.colors[0];
-
-      if(colorIndex == 0)
-        prevColor.innerHTML = `<span>${colorList[colorList.length - 1].title}</span>`;
-      else
-        prevColor.innerHTML = `<span>${colorList[colorIndex - 1].title}</span>`;
-
-      if(colorIndex == colorList.length - 1)
-        nextColor.innerHTML = `<span>${colorList[0].title}</span>`;
-      else
-        nextColor.innerHTML = `<span>${colorList[colorIndex + 1].title}</span>`;
 
     }
 
