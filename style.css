@@ -1,0 +1,38 @@
+html,body{
+  height:100%;
+}
+#color-box{
+  height:100%;
+  background-color: #7f53ac;
+  background-image: linear-gradient(0deg, #7f53ac, #647dee);
+}
+#color-box .row{
+  height:33.33%;
+}
+.controls{
+  width:100%;
+  /*background-color: rgba(255,255,255,0.01);*/
+}
+.controls a{
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  text-transform: uppercase;
+  font-size: 1em;
+  width:33.33%;
+  height: 100%;
+  display: table;
+  float:left;
+  text-align: center;
+  color: white;
+  font-family: Ubuntu;
+}
+.controls #title {
+  font-size: 2em;
+}
+
+.controls a span{
+  display: table-cell;
+  vertical-align: middle;
+}

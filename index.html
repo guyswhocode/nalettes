@@ -1,3 +1,69 @@
----
-layout: home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorDock</title>
+  <meta name="theme-color" content="#444">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="color-box" id="color-box">
+    <div class="row color-1"></div>
+    <div class="row controls">
+      <a id="prev"><span>Pineapple Yellow</span></a>
+      <a id="title"><span>Diamond Blue</span></a>
+      <a id="next"><span>Berry Red</span></a>
+    </div>
+    <div class="row color-2"></div>
+  </div>
+
+  <script src="color-list.js"></script>
+  <script>
+    const colorBox = document.getElementById('color-box');
+    const colorTitle = document.getElementById('title');
+    const nextColor = document.getElementById('next');
+    const prevColor = document.getElementById('prev');
+    const chromeBar = document.getElementsByTagName('meta')["theme-color"];
+    let colorIndex = 0;
+
+    function paintColor(colorDetails){
+      let colorsCombo = colorDetails.colors[0];
+      for (var c = 1; c < colorDetails.colors.length; c++) {
+        colorsCombo+= `,${colorDetails.colors[c]}`;
+      }
+      colorBox.style.backgroundImage = `linear-gradient(0deg, ${colorsCombo})`;
+      colorTitle.innerHTML = `<span>${colorDetails.title}</span>`
+      chromeBar.content = colorDetails.colors[0];
+
+      if(colorIndex == 0)
+        prevColor.innerHTML = `<span>${colorList[colorList.length - 1].title}</span>`;
+      else
+        prevColor.innerHTML = `<span>${colorList[colorIndex - 1].title}</span>`;
+
+      if(colorIndex == colorList.length - 1)
+        nextColor.innerHTML = `<span>${colorList[0].title}</span>`;
+      else
+        nextColor.innerHTML = `<span>${colorList[colorIndex + 1].title}</span>`;
+
+    }
+
+    paintColor(colorList[colorIndex]);
+
+    nextColor.addEventListener("click", function(){
+      if(colorIndex >= colorList.length)
+        colorIndex = 0;
+      colorIndex++;
+      paintColor(colorList[colorIndex]);
+    }); 
+
+    prevColor.addEventListener("click", function(){
+      if(colorIndex <= 0)
+        colorIndex = colorList.length - 1;
+      colorIndex--;
+      paintColor(colorList[colorIndex]);
+    }); 
+  </script>
+</body>
+</html>
