@@ -1,12 +1,46 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ColorDock</title>
-  <meta name="theme-color" content="#444">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <title>{{ site.name }}</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#3bb874">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="keywords" content="nalettes,palettes,colors,gwc,guyswhocode">
+    <meta name="author" content="GuysWhoCode">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{ site.name }}" />
+    <meta property="og:url" content="{{ site.url }}/nalettes" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:image" content="public/logo/nalette-logo.jpg" />
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="{{ site.url }}/nalettes" />
+    <meta name="twitter:description" content="{{ site.description }}" />
+    <meta name="twitter:title" content="{{ site.name }}" />
+    <meta name="twitter:image" content="public/logo/nalette-logo.jpg" />
+
+    <!-- Favicons  -->
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="200x200" href="public/logo/nalette-logo.jpg">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="public/logo/nalette-logo.jpg" sizes="200x200">
+    <meta name="msapplication-TileColor" content="#33bb77">
+    <meta name="msapplication-TileImage" content="public/logo/nalette-logo.jpg">
+
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/reset.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+  </head>
 </head>
 <body>
   <div class="color-box" id="color-box">
