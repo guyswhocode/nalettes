@@ -37,24 +37,42 @@
     <meta name="msapplication-TileImage" content="public/logo/nalette-logo.jpg">
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/public/styles/reset.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/public/styles/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+      <link rel="stylesheet" href="public/styles/semantic-ui-mansory.css">
+      <link rel="stylesheet" href="public/styles/style.css">
   </head>
 </head>
 <body>
+<br>
+<div class="ui container">
+  <div class="ui five wide column masonry flat grid">
+      
+    {% for palette in site.posts %}
+    <div class="column">
+      <div class="ui fluid card">
+<!--         <div class="image">
+          <img src="https://i5.walmartimages.ca/images/Large/463/3_r/6000191284633_R.jpg">
+        </div> -->
+        <div class="colors">
+          {% for color in palette.colors %}
+            <p class="color" style="background-color: {{color}};">{{color}}</p>
+          {% endfor %}
+        </div>
+        <div class="extra content">
+          <span class="right floated">
+            {{ palette.categories }}
+          </span>
+          <span>
+            <i class="eye icon"></i>
+           {{ palette.title }}
+          </span>
+        </div>
+      </div>
 
-  <div class="color-box" id="color-box">
-    <div class="row color-1"></div>
-    <div class="row controls">
-      <a id="prev"><span>&lt;</span></a>
-      <a id="title"><span>Diamond Blue</span></a>
-      <a id="next"><span>&gt;</span></a>
     </div>
-    <div class="row color-2"></div>
+    {% endfor %}
+    </div>
   </div>
-
-  <script src="{{ site.baseurl }}/public/scripts/color-list.js"></script>
-  <script src="{{ site.baseurl }}/public/scripts/paint.js"></script>
 
 </body>
 </html>
