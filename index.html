@@ -43,36 +43,32 @@
   </head>
 </head>
 <body>
-<br>
-<div class="ui container">
-  <div class="ui five wide column masonry flat grid">
-      
-    {% for palette in site.posts %}
-    <div class="column">
-      <div class="ui fluid card">
-<!--         <div class="image">
-          <img src="https://i5.walmartimages.ca/images/Large/463/3_r/6000191284633_R.jpg">
-        </div> -->
-        <div class="colors">
-          {% for color in palette.colors %}
-            <p class="color" style="background-color: {{color}};">{{color}}</p>
-          {% endfor %}
-        </div>
-        <div class="extra content">
-          <span class="right floated">
-            {{ palette.categories }}
-          </span>
-          <span>
-            <i class="eye icon"></i>
-           {{ palette.title }}
-          </span>
+
+  <div class="ui container">
+    <div class="ui five wide column masonry flat grid">
+        
+      {% for palette in site.posts %}
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="colors">
+            {% for color in palette.colors %}
+              <p class="color" style="background-color: {{color}};">{{color}}</p>
+            {% endfor %}
+          </div>
+          <div class="extra content">
+            <span class="right floated">
+              {{ palette.categories }}
+            </span>
+            <span>
+              <i class="eye icon"></i>
+            {{ palette.title }}
+            </span>
+          </div>
         </div>
       </div>
+      {% endfor %}
 
-    </div>
-    {% endfor %}
     </div>
   </div>
-
 </body>
 </html>
