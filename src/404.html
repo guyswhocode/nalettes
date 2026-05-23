@@ -1,0 +1,240 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Off the Trail — {{ site.name }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --color-sky:     #d4e2d4;
+      --color-sun:     #e8c47a;
+      --color-mountain:#7a9a7a;
+      --color-forest:  #4a6b4a;
+      --color-pine:    #2d4a2d;
+      --color-earth:   #8b7a5a;
+      --color-bark:    #5c4a32;
+      --color-bg:      #f4f1ea;
+      --color-text:    #3a3a2e;
+      --color-text-secondary: #7a7a6a;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 500px;
+    }
+
+    /* ---- SVG illustration ---- */
+    .scene {
+      width: 240px;
+      height: 180px;
+      margin: 0 auto 28px;
+      display: block;
+    }
+
+    /* ---- 404 ---- */
+    .code {
+      font-family: var(--font-display);
+      font-size: 6.5rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, var(--color-pine) 0%, var(--color-forest) 40%, var(--color-mountain) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--color-earth);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .message {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .message strong {
+      color: var(--color-forest);
+      font-weight: 600;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--color-forest);
+      box-shadow: 0 2px 8px rgba(74, 107, 74, 0.25);
+    }
+    .btn-primary:hover {
+      background: var(--color-pine);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(74, 107, 74, 0.35);
+    }
+
+    .btn-secondary {
+      color: var(--color-earth);
+      background: transparent;
+      border: 2px solid var(--color-earth);
+    }
+    .btn-secondary:hover {
+      background: var(--color-earth);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ---- Leaf divider ---- */
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px 0 28px;
+      color: var(--color-earth);
+      opacity: 0.5;
+      font-size: 0.8rem;
+    }
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: var(--color-earth);
+    }
+
+    @media (max-width: 480px) {
+      .code { font-size: 4.5rem; }
+      .tagline { font-size: 1.1rem; }
+      .scene { width: 180px; height: 135px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- SVG nature scene -->
+    <svg class="scene" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Sky -->
+      <rect width="240" height="180" rx="12" fill="var(--color-sky, #d4e2d4)"/>
+
+      <!-- Sun -->
+      <circle cx="192" cy="36" r="18" fill="var(--color-sun, #e8c47a)" opacity="0.8"/>
+
+      <!-- Far mountain -->
+      <path d="M0 140 L60 55 L100 100 L140 45 L200 100 L240 70 L240 180 L0 180Z"
+            fill="var(--color-mountain, #7a9a7a)" opacity="0.5"/>
+
+      <!-- Near mountain -->
+      <path d="M0 180 L0 95 L50 120 L90 72 L140 115 L180 68 L240 115 L240 180Z"
+            fill="var(--color-forest, #4a6b4a)" opacity="0.7"/>
+
+      <!-- Ground -->
+      <rect x="0" y="145" width="240" height="35" fill="var(--color-earth, #8b7a5a)" opacity="0.35" rx="2"/>
+
+      <!-- Pine tree 1 -->
+      <rect x="38" y="110" width="4" height="18" fill="var(--color-bark, #5c4a32)" rx="1"/>
+      <polygon points="40,78 24,112 56,112" fill="var(--color-pine, #2d4a2d)"/>
+      <polygon points="40,88 26,106 54,106" fill="var(--color-forest, #4a6b4a)"/>
+
+      <!-- Pine tree 2 -->
+      <rect x="188" y="105" width="4" height="16" fill="var(--color-bark, #5c4a32)" rx="1"/>
+      <polygon points="190,75 176,106 204,106" fill="var(--color-pine, #2d4a2d)"/>
+      <polygon points="190,84 178,100 202,100" fill="var(--color-forest, #4a6b4a)"/>
+
+      <!-- Pine tree 3 (small) -->
+      <rect x="113" y="120" width="3" height="12" fill="var(--color-bark, #5c4a32)" rx="1"/>
+      <polygon points="115,96 104,122 126,122" fill="var(--color-pine, #2d4a2d)"/>
+
+      <!-- Wandering path / dashed trail -->
+      <path d="M80 170 Q90 155 120 140 Q145 128 150 115 Q155 102 170 100"
+            stroke="var(--color-earth, #8b7a5a)" stroke-width="2.5" stroke-dasharray="4 4"
+            fill="none" opacity="0.6"/>
+
+      <!-- Small footprint / marker along the trail -->
+      <circle cx="95" cy="150" r="2.5" fill="var(--color-bark, #5c4a32)" opacity="0.5"/>
+      <circle cx="115" cy="137" r="2.5" fill="var(--color-bark, #5c4a32)" opacity="0.5"/>
+
+      <!-- Tiny hiker figure -->
+      <g transform="translate(148, 100)">
+        <circle cx="0" cy="-10" r="5" fill="var(--color-bark, #5c4a32)"/>
+        <rect x="-3" y="-5" width="6" height="8" rx="2" fill="var(--color-forest, #4a6b4a)"/>
+        <line x1="0" y1="3" x2="-4" y2="10" stroke="var(--color-bark, #5c4a32)" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="0" y1="3" x2="4" y2="10" stroke="var(--color-bark, #5c4a32)" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Backpack -->
+        <rect x="-5" y="-3" width="3" height="5" rx="1" fill="var(--color-earth, #8b7a5a)"/>
+        <!-- Tiny map in hand -->
+        <rect x="4" y="-6" width="4" height="3" rx="0.5" fill="var(--color-sun, #e8c47a)" opacity="0.8"/>
+      </g>
+    </svg>
+
+    <!-- 404 heading -->
+    <div class="code">404</div>
+    <p class="tagline">— off the trail —</p>
+
+    <p class="message">
+      Looks like this path doesn't exist on our map.<br />
+      The forest is full of beautiful <strong>palettes</strong> waiting to be found&nbsp;though.<br />
+      Let's get you back on track.
+    </p>
+
+    <div class="divider">✦ ✦ ✦</div>
+
+    <div class="btn-group">
+      <a href="/" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 1L1 8h3v7h8V8h3L8 1z" fill="currentColor"/>
+        </svg>
+        Back to Palettes
+      </a>
+      <a href="/about" class="btn btn-secondary">Explore the Map</a>
+    </div>
+
+  </div>
+</body>
+</html>

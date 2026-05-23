@@ -2,3 +2,4 @@ _site/
 _resources/
 .jekyll-cache/
 temp/
+node_modules/

@@ -1,0 +1,26 @@
+{
+  "name": "nalettes",
+  "version": "1.0.0",
+  "description": "A repository of color palettes picked up carefully, inspired from nature. [Nature Inspired Color Palettes](http://www.guyswhocode.com/palettes)",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shajanjp/nalettes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shajanjp/nalettes/issues"
+  },
+  "homepage": "https://github.com/shajanjp/nalettes#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}
