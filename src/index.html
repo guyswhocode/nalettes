@@ -1,0 +1,228 @@
+---
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="theme-color" content="#1a1a2e" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="{{ site.description }}" />
+        <meta
+            name="keywords"
+            content="nalettes,palettes,colors,gwc,guyswhocode"
+        />
+        <meta name="author" content="GuysWhoCode" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="{{ site.name }}" />
+        <meta property="og:url" content="{{ site.url }}/nalettes" />
+        <meta property="og:description" content="{{ site.description }}" />
+        <meta property="og:image" content="public/logo/nalette-logo.jpg" />
+        <meta property="og:site_name" content="{{ site.name }}" />
+        <meta property="og:locale" content="en_US" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="{{ site.url }}/nalettes" />
+        <meta name="twitter:description" content="{{ site.description }}" />
+        <meta name="twitter:title" content="{{ site.name }}" />
+        <meta name="twitter:image" content="public/logo/nalette-logo.jpg" />
+
+        <title>{{ site.name }}</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="public/styles/style.css" />
+        <link rel="icon" href="favicon.png" />
+        <link
+            rel="apple-touch-icon"
+            sizes="200x200"
+            href="public/logo/nalette-logo.jpg"
+        />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="/" class="site-logo">
+                    <img
+                        class="logo-img"
+                        src="public/logo/nalette-logo.jpg"
+                        alt="Nalettes"
+                        width="36"
+                        height="36"
+                    />
+                    <span class="site-title">{{ site.name }}</span>
+                </a>
+                <nav class="site-nav">
+                    <button
+                        class="nav-toggle"
+                        id="nav-toggle"
+                        aria-label="Menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-links" id="nav-links">
+                        <a href="#" class="nav-link active" data-filter="all"
+                            >All</a
+                        >
+                        <a href="#" class="nav-link" data-filter="fruits"
+                            >Fruits</a
+                        >
+                        <a href="#" class="nav-link" data-filter="flowers"
+                            >Flowers</a
+                        >
+                        <a href="#" class="nav-link" data-filter="vegetables"
+                            >Vegetables</a
+                        >
+                        <a href="#" class="nav-link" data-filter="trees"
+                            >Trees</a
+                        >
+                        <a href="#" class="nav-link" data-filter="skies"
+                            >Skies</a
+                        >
+                        <a href="#" class="nav-link" data-filter="seas">Seas</a>
+                        <a href="#" class="nav-link" data-filter="gems">Gems</a>
+                        <a href="#" class="nav-link" data-filter="spices"
+                            >Spices</a
+                        >
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    Nature's Palette,<br />Curated for You
+                </h1>
+                <p class="hero-description">{{ site.description }}</p>
+            </div>
+        </section>
+
+        <!-- Palettes Grid -->
+        <main class="main-content">
+            <div class="container">
+                <div class="palettes-grid" id="palettes-grid">
+                    {% for palette in collections.palettes %}
+                    <article
+                        class="palette-card"
+                        data-category="{{ palette.data.category | first }}"
+                    >
+                        <div class="palette-swatches">
+                            {% for color in palette.data.colors %}
+                            <div
+                                class="palette-swatch"
+                                style="background-color: {{ color }}"
+                            >
+                                <span class="palette-hex">{{ color }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="palette-info">
+                            <h2 class="palette-title">
+                                {{ palette.data.title }}
+                            </h2>
+                            <span class="palette-category"
+                                >{{ palette.data.category | first }}</span
+                            >
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>
+                    &copy; {{ "now" | date: "%Y" }} {{ site.name }}. A
+                    collection by
+                    <a href="{{ site.url }}" target="_blank" rel="noopener"
+                        >GuysWhoCode</a
+                    >.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            // Category filter
+            const filterLinks = document.querySelectorAll(".nav-link");
+            const cards = document.querySelectorAll(".palette-card");
+
+            // Mobile nav toggle
+            const navToggle = document.getElementById("nav-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            if (navToggle) {
+                navToggle.addEventListener("click", () => {
+                    navToggle.classList.toggle("open");
+                    navLinks.classList.toggle("open");
+                    document.body.classList.toggle("nav-open");
+                });
+            }
+
+            filterLinks.forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    filterLinks.forEach((l) => l.classList.remove("active"));
+                    link.classList.add("active");
+
+                    const filter = link.dataset.filter;
+                    cards.forEach((card) => {
+                        if (
+                            filter === "all" ||
+                            card.dataset.category === filter
+                        ) {
+                            card.style.display = "flex";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+
+                    // Close mobile nav on selection
+                    if (window.innerWidth <= 640) {
+                        navToggle.classList.remove("open");
+                        navLinks.classList.remove("open");
+                        document.body.classList.remove("nav-open");
+                    }
+                });
+            });
+
+            // Copy hex code to clipboard on click
+            document.querySelectorAll(".palette-hex").forEach((el) => {
+                el.addEventListener("click", async (e) => {
+                    e.stopPropagation();
+                    const hex = el.textContent.trim();
+                    try {
+                        await navigator.clipboard.writeText(hex);
+                        const original = el.textContent;
+                        el.textContent = "Copied!";
+                        el.style.color = "#ffffff";
+                        el.style.opacity = "1";
+                        el.style.transform = "scale(1)";
+                        setTimeout(() => {
+                            el.textContent = original;
+                        }, 800);
+                    } catch {
+                        // Fallback
+                        const sel = window.getSelection();
+                        const range = document.createRange();
+                        range.selectNodeContents(el);
+                        sel.removeAllRanges();
+                        sel.addRange(range);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
