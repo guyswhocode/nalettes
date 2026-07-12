@@ -1,6 +1,0 @@
----
-  title: "Jackfruit"
-  category: ["fruits"]
-  colors: ["#f4c84a","#e8b83a","#fae89a"]
----
-  
